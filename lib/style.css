@@ -1,0 +1,58 @@
+body {
+  border: 0;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+
+body,
+input,
+button {
+  font: normal normal normal 14px/1.5em "Open Sans","Helvetica","Arial",sans-serif;
+}
+
+body:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.preview {
+  float: left;
+  padding: 1px;
+  border: 1px dashed black;
+  height: 100%;
+  margin: 0 0 0 5px;
+}
+
+.settings {
+  float: left;
+  border: 1px solid black;
+  background: #eee;
+  min-width: 200px;
+  padding: 20px;
+  margin: 0 5px 0 0;
+}
+
+.settings-field {
+  padding: 3px 0;
+}
+
+.settings label {
+  display: inline-block;
+  min-width: 8em;
+}
+
+.settings input {
+  min-width: 4em;
+}
+
+.settings label:after {
+  content: ':';
+}
+
+.preview button {
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+}
