@@ -5,62 +5,82 @@
     <title>Border approximator</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body onload="render()">
     <form class="settings">
       <div class="settings-field">
+        <label>Background color</label>
+        <input id="backgroundColor" type="color" value="#ffffff" oninput="render()" />
+      </div>
+      <div class="settings-field">
+        <label>Button color</label>
+        <input id="buttonColor" type="color" value="#ff0000" oninput="render()" />
+      </div>
+      <hr />
+      <div class="settings-field">
         <label>Button width</label>
-        <input type="number" min="10" max=1000 value=100 />
+        <input id="buttonWidth" type="number" min="10" max=1000 value=100 oninput="render()" />
         <span>px</span>
       </div>
       <div class="settings-field">
         <label>Button height</label>
-        <input type="number" min="10" max=1000 value=50 />
+        <input id="buttonHeight" type="number" min="10" max=1000 value=40 oninput="render()" />
+        <span>px</span>
+      </div>
+      <div class="settings-field">
+        <label>Button corner radius</label>
+        <input id="buttonCornerRadius" type="number" min="0" max=100 value=20 oninput="render()" />
         <span>px</span>
       </div>
       <hr />
       <div class="settings-field">
         <label>Border width</label>
-        <input type="number" min="0" max=15 value=0 />
+        <input id="borderWidth" type="number" min="0" max=15 value=0 oninput="render()" />
         <span>px</span>
       </div>
       <div class="settings-field">
         <label>Border color</label>
-        <input type="color" value="#000000" />
+        <input id="borderColor" type="color" value="#000000" oninput="render()" />
       </div>
       <hr />
       <div class="settings-field">
         <label>Shadow offset-X</label>
-        <input type="number" min="-10" max=10 value=0 />
+        <input id="shadowOffsetX" type="number" min="-15" max=15 value=0 oninput="render()" />
         <span>px</span>
       </div>
       <div class="settings-field">
         <label>Shadow offset-Y</label>
-        <input type="number" min="-10" max=10 value=0 />
+        <input id="shadowOffsetY" type="number" min="-15" max=15 value=0 oninput="render()" />
         <span>px</span>
       </div>
       <div class="settings-field">
         <label>Shadow size</label>
-        <input type="number" min=0 max=15 value=0 />
+        <input id="shadowSize" type="number" min=0 max=15 value=0 oninput="render()" />
         <span>px</span>
       </div>
       <div class="settings-field">
         <label>Shadow blur</label>
-        <input type="number" min=0 max=15 value=0 />
+        <input id="shadowBlur" type="number" min=0 max=15 value=0 oninput="render()" />
         <span>px</span>
       </div>
       <div class="settings-field">
         <label>Shadow color</label>
-        <input type="color" value="#000000" />
+        <input id="shadowColor" type="color" value="#000000" oninput="render()" />
       </div>
       <div class="settings-field">
         <label>Shadow opacity</label>
-        <input type="number" min=0 max=100 value=0 />
+        <input id="shadowOpacity" type="number" min=0 max=100 value=100 oninput="render()" />
         <span>%</span>
       </div>
     </form>
 
     <div class="preview">
-      <button>I am a button</button>
+      <button id="preview_button"></button>
     </div>
+
+    <div class="approximation">
+      <button id="approximation_button"></button>
+    </div>
+
+    <script src="preview.js"></script>
   </body>
 </html>

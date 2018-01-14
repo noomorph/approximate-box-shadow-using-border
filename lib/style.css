@@ -17,12 +17,14 @@ body:after {
   display: block;
 }
 
+.approximation,
 .preview {
   float: left;
-  padding: 1px;
-  border: 1px dashed black;
+  padding: 0;
   height: 100%;
   margin: 0 0 0 5px;
+  padding: 40px;
+  border: 1px dashed black;
 }
 
 .settings {
@@ -51,8 +53,12 @@ body:after {
   content: ':';
 }
 
-.preview button {
+.preview button,
+.approximation button {
   -webkit-appearance: none;
+  display: block;
   border: 0;
   outline: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
