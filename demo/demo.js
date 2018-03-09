@@ -21,7 +21,7 @@
 
     function addHexOpacity(hexColor, opacity) {
         const opacity256 = Math.floor(opacity * 2.55).toString(16);
-        const opacityHex = ((opacity < 16) ? '0' : '') + opacity256;
+        const opacityHex = ((opacity256.length === 1) ? '0' : '') + opacity256;
 
         return hexColor + opacityHex;
     }

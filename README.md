@@ -9,7 +9,7 @@ Fortunately, I had some time and luck to conduct my own research and you came he
 
 ### Demo
 
-<iframe id="demo-iframe" src="demo/index.html" width="100%" height="460" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+<iframe id="demo-iframe" src="demo/index.html?rnd=3" width="100%" height="460" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
 
 ### The Useful Code
 
