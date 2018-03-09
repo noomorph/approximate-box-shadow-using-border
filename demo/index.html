@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow-border approximator</title>
+    <link rel="stylesheet" href="demo.css">
+    <script defer src="approximate.js"></script>
+    <script defer src="demo.js"></script>
+</head>
+<body>
+<h1>Shadow approximation using&nbsp;solid&nbsp;border</h1>
+<p>
+    This demo answers <a
+        href="https://stackoverflow.com/questions/48097129/how-to-approximate-css-box-shadow-property-using-solid-border-only"
+        target=_blank rel=noopener>my own question on StackOverflow</a>.
+</p>
+<div class="render-side-comparison">
+    <form class="settings">
+        <div class="settings-field">
+            <label>Background color</label>
+            <input id="backgroundColor" type="color" value="#ffffff" />
+        </div>
+        <hr/>
+        <div class="settings-field">
+            <label>Button width</label>
+            <input id="buttonWidth" type="number" min="10" max=1000 value=100 />
+            <span>px</span>
+        </div>
+        <div class="settings-field">
+            <label>Button height</label>
+            <input id="buttonHeight" type="number" min="10" max=1000 value=40 />
+            <span>px</span>
+        </div>
+        <div class="settings-field">
+            <label>Button corner radius</label>
+            <input id="buttonCornerRadius" type="number" min="0" max=100 value=20 />
+            <span>px</span>
+        </div>
+        <hr/>
+        <div class="settings-field">
+            <label>Shadow size</label>
+            <input id="shadowSize" type="number" min=0 max=15 value=1 />
+            <span>px</span>
+        </div>
+        <div class="settings-field">
+            <label>Shadow blur</label>
+            <input id="shadowBlur" type="number" min=0 max=15 value=3 />
+            <span>px</span>
+        </div>
+        <div class="settings-field">
+            <label>Shadow color</label>
+            <input id="shadowColor" type="color" value="#000000" />
+        </div>
+        <div class="settings-field">
+            <label>Shadow opacity</label>
+            <input id="shadowOpacity" type="number" min=0 max=100 value=100 />
+            <span>%</span>
+        </div>
+        <hr/>
+        <div class="description-field">
+            <b>Approximation:</b>
+        </div>
+        <div class="settings-field">
+            <label>Border width</label>
+            <input id="borderWidth" type="number" readonly/>
+            <span>px</span>
+        </div>
+        <div class="settings-field">
+            <label>Border opacity</label>
+            <input id="borderOpacity" type="number" readonly/>
+            <span>%</span>
+        </div>
+    </form>
+
+    <div class="render-box">
+        <button id="shadow-button">Shadow</button>
+    </div>
+
+    <div class="render-box">
+        <button id="border-button">Border</button>
+    </div>
+
+</div>
+<footer>
+    <p>
+        Copyright &copy;2018 Yaroslav Serhieiev <a href="mailto:noomorph@gmail.com">&lt;noomorph@gmail.com&gt;</a>
+    </p>
+    <p>
+        Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+    </p>
+    <p>
+        <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener"></a>
+    </p>
+    <p>
+        Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+    </p>
+</footer>
+</body>
+</html>

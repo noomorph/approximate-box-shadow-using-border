@@ -1,0 +1,101 @@
+body {
+  border: 0;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  max-width: 980px;
+}
+
+body,
+input,
+button,
+h1 {
+  font: normal normal normal 14px/1.5em "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 0 0.5em;
+  text-align: center;
+}
+
+input[readonly] {
+  background: #fff3;
+}
+
+.render-side-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.render-side-comparison > * {
+  margin-right: 10px;
+  outline: 1px solid black;
+}
+
+.settings {
+  background: #eee;
+  width: 240px;
+  padding: 20px;
+  margin: 0 10px 0 0;
+  flex: 1 0 240px;
+}
+
+@media (max-width: 690px) {
+  .settings {
+    order: 3;
+  }
+}
+
+.settings-field {
+  padding: 3px 0;
+}
+
+.description-field {
+  padding: 7px 0;
+}
+
+.settings label {
+  display: inline-block;
+  min-width: 10em;
+}
+
+.settings input {
+  width: 4em;
+}
+
+.settings label:after {
+  content: ':';
+}
+
+.render-box button,
+.button-sample {
+  -webkit-appearance: none;
+  display: block;
+  background: #0000;
+  border: 0;
+  border-style: solid;
+  box-sizing: content-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.render-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+.render-box button {
+  margin: 40px;
+}
+
+#sheet main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1920px;
+}
