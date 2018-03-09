@@ -1,11 +1,15 @@
-## About
+# What does it solve?
 
-This project was inspired by my own question on [StackOverflow](https://stackoverflow.com/questions/48097129/how-to-approximate-css-box-shadow-property-using-solid-border-only).
-As nobody was interested or able to answer it, I had to conduct my own research. Fortunately, you came here when I got some useful results for you.
+There is a transparent borderless *Button A* which is styled using `box-shadow` CSS property.
+You have to create *Button B* which should look as similar as possible to *Button A* without using `box-shadow`.
+Unfortunately, the only CSS properties you can use are either `border` or `outline`.
+
+In our days it is common to search answers or ask smart people on *StackOverflow*, [StackOverflow](but sometimes nobody is interested or able to answer your question, like in my case).
+Fortunately, I had some time and luck to conduct my own research and you came here in time, when I've got some useful results for you.
 
 ### Demo
 
-<iframe src="demo/index.html"></iframe>
+<iframe src="demo/index.html" width="100%" allowtransparency="true" frameborder=0></iframe>
 
 ### The Useful Code
 
