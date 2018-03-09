@@ -56,6 +56,7 @@
         shadowButton.style.boxShadow = `0 0 ${settings.shadowBlur}px ${settings.shadowSize}px ${shadowColor}`;
         borderButton.style.borderWidth = borderWidth + 'px';
         borderButton.style.borderColor = borderColor;
+        borderButton.style.color = shadowButton.style.color = settings.shadowColor;
 
         borderWidthOutput.value = borderWidth;
         borderOpacityOutput.value = Math.round(settings.shadowOpacity * borderAlpha);
