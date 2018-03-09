@@ -1,10 +1,11 @@
 body {
   background: transparent !important;
   border: 0;
+  padding: 0;
   margin: auto;
-  padding: 10px;
-  position: relative;
   max-width: 980px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body,
@@ -26,28 +27,18 @@ input[readonly] {
 
 .render-side-comparison {
   display: flex;
+  flex: 1 0 auto;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: stretch;
 }
 
-.render-side-comparison > * {
-  margin-right: 10px;
-  outline: 1px solid black;
-}
-
 .settings {
   background: #eee;
-  width: 240px;
   padding: 20px;
-  margin: 0 10px 0 0;
-  flex: 1 0 240px;
-}
-
-@media (max-width: 690px) {
-  .settings {
-    order: 3;
-  }
+  margin: 0;
+  border: 1px solid black;
+  flex: 1 0 auto;
 }
 
 .settings-field {
@@ -88,7 +79,9 @@ input[readonly] {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1 0 auto;
+  flex: 1 0 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
 }
 
 .render-box button {

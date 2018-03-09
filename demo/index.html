@@ -9,71 +9,70 @@
     <script defer src="demo.js"></script>
 </head>
 <body>
+<form class="settings">
+    <div class="settings-field">
+        <label>Background color</label>
+        <input id="backgroundColor" type="color" value="#ffffff" />
+    </div>
+    <hr/>
+    <div class="settings-field">
+        <label>Button width</label>
+        <input id="buttonWidth" type="number" min="10" max=1000 value=100 />
+        <span>px</span>
+    </div>
+    <div class="settings-field">
+        <label>Button height</label>
+        <input id="buttonHeight" type="number" min="10" max=1000 value=40 />
+        <span>px</span>
+    </div>
+    <div class="settings-field">
+        <label>Button corner radius</label>
+        <input id="buttonCornerRadius" type="number" min="0" max=100 value=20 />
+        <span>px</span>
+    </div>
+    <hr/>
+    <div class="settings-field">
+        <label>Shadow size</label>
+        <input id="shadowSize" type="number" min=0 max=15 value=1 />
+        <span>px</span>
+    </div>
+    <div class="settings-field">
+        <label>Shadow blur</label>
+        <input id="shadowBlur" type="number" min=0 max=15 value=3 />
+        <span>px</span>
+    </div>
+    <div class="settings-field">
+        <label>Shadow color</label>
+        <input id="shadowColor" type="color" value="#000000" />
+    </div>
+    <div class="settings-field">
+        <label>Shadow opacity</label>
+        <input id="shadowOpacity" type="number" min=0 max=100 value=100 />
+        <span>%</span>
+    </div>
+    <hr/>
+    <div class="description-field">
+        <b>Approximation:</b>
+    </div>
+    <div class="settings-field">
+        <label>Border width</label>
+        <input id="borderWidth" type="number" readonly/>
+        <span>px</span>
+    </div>
+    <div class="settings-field">
+        <label>Border opacity</label>
+        <input id="borderOpacity" type="number" readonly/>
+        <span>%</span>
+    </div>
+</form>
 <div class="render-side-comparison">
-    <form class="settings">
-        <div class="settings-field">
-            <label>Background color</label>
-            <input id="backgroundColor" type="color" value="#ffffff" />
-        </div>
-        <hr/>
-        <div class="settings-field">
-            <label>Button width</label>
-            <input id="buttonWidth" type="number" min="10" max=1000 value=100 />
-            <span>px</span>
-        </div>
-        <div class="settings-field">
-            <label>Button height</label>
-            <input id="buttonHeight" type="number" min="10" max=1000 value=40 />
-            <span>px</span>
-        </div>
-        <div class="settings-field">
-            <label>Button corner radius</label>
-            <input id="buttonCornerRadius" type="number" min="0" max=100 value=20 />
-            <span>px</span>
-        </div>
-        <hr/>
-        <div class="settings-field">
-            <label>Shadow size</label>
-            <input id="shadowSize" type="number" min=0 max=15 value=1 />
-            <span>px</span>
-        </div>
-        <div class="settings-field">
-            <label>Shadow blur</label>
-            <input id="shadowBlur" type="number" min=0 max=15 value=3 />
-            <span>px</span>
-        </div>
-        <div class="settings-field">
-            <label>Shadow color</label>
-            <input id="shadowColor" type="color" value="#000000" />
-        </div>
-        <div class="settings-field">
-            <label>Shadow opacity</label>
-            <input id="shadowOpacity" type="number" min=0 max=100 value=100 />
-            <span>%</span>
-        </div>
-        <hr/>
-        <div class="description-field">
-            <b>Approximation:</b>
-        </div>
-        <div class="settings-field">
-            <label>Border width</label>
-            <input id="borderWidth" type="number" readonly/>
-            <span>px</span>
-        </div>
-        <div class="settings-field">
-            <label>Border opacity</label>
-            <input id="borderOpacity" type="number" readonly/>
-            <span>%</span>
-        </div>
-    </form>
+  <div class="render-box">
+      <button id="shadow-button">Shadow</button>
+  </div>
 
-    <div class="render-box">
-        <button id="shadow-button">Shadow</button>
-    </div>
-
-    <div class="render-box">
-        <button id="border-button">Border</button>
-    </div>
+  <div class="render-box">
+      <button id="border-button">Border</button>
+  </div>
 </div>
 </body>
 </html>
