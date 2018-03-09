@@ -4,7 +4,7 @@ There is a transparent borderless *Button A* which is styled using `box-shadow` 
 You have to create *Button B* which should look as similar as possible to *Button A* without using `box-shadow`.
 Unfortunately, the only CSS properties you can use are either `border` or `outline`.
 
-In our days it is common to search answers or ask smart people on *StackOverflow*, [StackOverflow](but sometimes nobody is interested or able to answer your question, like in my case).
+In our days it is common to search answers or ask smart people on **StackOverflow**, [but sometimes nobody is interested or able to answer your question, like in my case](https://stackoverflow.com/questions/48097129/how-to-approximate-css-box-shadow-property-using-solid-border-only).
 Fortunately, I had some time and luck to conduct my own research and you came here in time, when I've got some useful results for you.
 
 ### Demo
