@@ -8,7 +8,7 @@ const SIZE = 40;
 
 function distance(gray1, gray2) {
   const dg = gray1 - gray2;
-  return Math.abs(dg) * dg * dg;
+  return dg * dg;
 }
 
 function overall_distance(colors, borderPixels, borderColor) {
