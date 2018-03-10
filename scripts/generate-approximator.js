@@ -1,11 +1,14 @@
 const _ = require('lodash');
-const tests = require('./cases.json');
+const zlib = require('zlib');
+const fs = require('fs');
+const tests = JSON.parse(zlib.gunzipSync(fs.readFileSync('./cases.json.gz')));
 
+const ff = (x, s = ' ') => (x < 10 ? s : '') + x;
 const SIZE = 40;
 
 function distance(gray1, gray2) {
   const dg = gray1 - gray2;
-  return dg * dg;
+  return Math.abs(dg) * dg * dg;
 }
 
 function overall_distance(colors, borderPixels, borderColor) {
@@ -63,9 +66,11 @@ for (const test of tests) {
   const denom = (size << 4) + blur;
   const alpha = 1 - (bestOne.color / 255);
   const alpha2 = (Math.round(alpha * 100) * 0.01).toFixed(2);
-  const w = (bestOne.width < 10 ? ' ' : '') + bestOne.width;
 
-  const line = [denom, w, alpha2];
-  mapping.push([denom, w, alpha2]);
-  console.log(`[${w}, ${alpha2}],`);
+  mapping.push(`[${ff(bestOne.width)}, ${alpha2}]`);
 }
+
+console.log('const SHADOW_APPROXIMATION_MAP = [');
+console.log(' '.repeat(14) + _.times(16, i => `/*blur=${ff(i, '0')}*/`).join(' '));
+_.chunk(mapping, 16).forEach((chunk, i) => console.log(`/* size=${ff(i, '0')} */ ` + chunk.join(', ') + ','));
+console.log('];');

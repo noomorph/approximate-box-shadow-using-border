@@ -62,7 +62,11 @@
         borderOpacityOutput.value = Math.round(settings.shadowOpacity * borderAlpha);
 
         if (parent && parent.document) {
-          parent.document.getElementById('demo-iframe').style.height = document['body'].offsetHeight + 'px';
+          const iframe = parent.document.getElementById('demo-iframe');
+
+          if (iframe) {
+            iframe.style.height = document['body'].offsetHeight + 'px';
+          }
         }
     }
 
